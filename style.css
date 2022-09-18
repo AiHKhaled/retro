@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+* {
+  font-family: monospace;
+  background-color: black;
+  color: #60ff42;
+}
+
+body {
+  margin: 100px 150px 0 150px;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+}
+
+.title {
+  padding-left: 25%;
+  font-family: 'Combo', cursive;
+  font-size: 30px;
+}
+.gif {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid white;
+}
+.links {
+  display: flex;
+  flex: 1;
+  gap: 15px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.links a {
+  text-decoration: none;
+  color: rgb(255, 204, 153);
+  font-size: 30px;
+}
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.innerContainer img {
+  cursor: pointer;
+}
+.intro {
+  display: block;
+  padding: 0 58px 58px 58px;
+
+  line-height: 2;
+  font-size: medium;
+}
+.terry {
+  width: 50%;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+footer h5 {
+  color: white;
+}
+footer a {
+  color: rgb(255, 204, 153);
+}
+footer span {
+  color: rgb(102, 102, 53);
+}
+
+.left {
+  max-width: 50%;
+}
+.stickersContainer {
+  gap: 20px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 720px) {
+  .middle {
+    flex-wrap: wrap;
+  }
+}
+
+.typewriter h5 {
+  color: #60ff42;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: solid #60ff42; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.7s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #60ff42;
+  }
+}
