@@ -1,5 +1,4 @@
 import { corpus } from './data.js'
-import { generator } from './stickerGenerator.js'
 
 const links = document.querySelector('.links')
 const date = document.getElementById('date')
@@ -37,7 +36,7 @@ function headerLinks() {
 function getTime() {
   const currentTime = new Date().toLocaleDateString()
 
-  return (date.innerHTML = `this website was made starting from new ${currentTime}`)
+  return (date.innerHTML = `this website was made starting from  ${currentTime}`)
 }
 
 function godSpeak() {
@@ -50,6 +49,5 @@ function godSpeak() {
 }
 getTime()
 headerLinks()
-generator()
 
-export default (headerLinks, getTime, godSpeak, generator)
+export default (headerLinks, getTime, godSpeak)

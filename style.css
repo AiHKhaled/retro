@@ -78,10 +78,12 @@ footer span {
   max-width: 50%;
 }
 .stickersContainer {
-  gap: 20px;
-
   display: flex;
-  flex-direction: row;
+  max-height: 150px;
+  gap: 20px;
+  flex-direction: column;
+
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
@@ -93,37 +95,5 @@ footer span {
 @media screen and (max-width: 720px) {
   .middle {
     flex-wrap: wrap;
-  }
-}
-
-.typewriter h5 {
-  color: #60ff42;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: solid #60ff42; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.1em; /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.7s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #60ff42;
   }
 }

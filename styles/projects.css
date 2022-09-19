@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+* {
+  font-family: monospace;
+  background-color: black;
+  color: #60ff42;
+}
+body {
+  margin: 100px 150px 0 150px;
+  padding: 0;
+}
+
+iframe[seamless] {
+  border: none;
+}
