@@ -22,5 +22,3 @@ function generator() {
   })
 }
 generator()
-
-console.log(stickers)
