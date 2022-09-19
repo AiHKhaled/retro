@@ -1,8 +1,8 @@
-export function appendHeader(title) {
-  let el = document.querySelector('gifContainer')
+function appendHeader(title, img) {
+  let el = document.querySelector('.top')
 
   let content = document.createTextNode(` <h3 class="title">${title}</h3>
-  <img class="gif" src="snow.gif" alt="" />
+  <img class="gif" src=${img} alt="" />
 </div>
 <div class="header">
   <div class="links"></div>`)
