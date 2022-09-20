@@ -30,3 +30,7 @@ li {
   max-width: 60px;
   max-height: 40px;
 }
+
+.stack {
+  padding-left: 25px;
+}
