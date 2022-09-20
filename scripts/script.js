@@ -42,19 +42,6 @@ function godSpeak() {
   document.getElementById('godSpeakDisplay').textContent = godsong
 }
 
-$(document).ready(function () {
-  if (window.location.href.indexOf('home.html') > -1) {
-    const currentTime = new Date().toLocaleDateString()
-
-    return (date.innerHTML = `this website was made starting from  ${currentTime}`)
-  }
-})
-
-$(document).ready(function (title) {
-  if (document.getElementsByTagName(title)) {
-  }
-})
-
 headerLinks()
 
 export default (headerLinks, godSpeak)
