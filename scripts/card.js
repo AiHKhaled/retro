@@ -9,21 +9,23 @@ function createCard(title, content, link, stack) {
                 </li>
             `
 }
-$(function () {
-  projects.forEach((project) => {
-    $('.cards').append(
-      $(
-        createCard(
-          project.title,
-          project.content,
-          project.link,
-          project.stacks
-            ?.map(
-              (stack) => `<img src='../stacks${stack}' class="card-img" /> `
-            )
-            .join('')
+setTimeout(() => {
+  $(function () {
+    projects.forEach((project) => {
+      $('.cards').append(
+        $(
+          createCard(
+            project.title,
+            project.content,
+            project.link,
+            project.stacks
+              ?.map(
+                (stack) => `<img src='../stacks${stack}' class="card-img" /> `
+              )
+              .join('')
+          )
         )
       )
-    )
+    })
   })
-})
+}, 1500)
