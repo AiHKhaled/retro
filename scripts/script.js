@@ -1,10 +1,9 @@
 import { corpus } from './data.js'
 
 const links = document.querySelector('.links')
-const date = document.getElementById('date')
 
 const headers = [
-  { name: '', gif: 'home.png', link: 'home.html' },
+  { name: '', gif: 'home.png', link: 'index.html' },
   { name: '', gif: 'projects.gif', link: 'projects.html' },
   { name: '', gif: 'blogs.gif', link: 'blogs.html' },
 ]
