@@ -1,0 +1,26 @@
+.about {
+  max-width: 700px;
+  text-align: left;
+  padding: 10px;
+  line-height: 2;
+  font-size: 13px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding-top: 30px;
+  justify-content: center;
+}
+.socials img {
+  transition: transform 0.2s;
+  width: 32px;
+  height: 32px;
+}
+.socials img:hover {
+  transform: scale(1.2);
+}
