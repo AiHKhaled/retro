@@ -8,6 +8,7 @@ function createCard(title, content, link, thumbnails, stack) {
                 <div class="thumbnail"> ${thumbnails} </div>
                 <h4>technologies used:</h4> <div class="stack-container"> ${stack}</div>
                 </li>
+                
             `
 }
 
@@ -31,4 +32,10 @@ $(document).ready(function () {
       )
     )
   })
+  $('.cards').append(`
+  <li class='back'>
+ 
+ <a href="index.html"> <img src="back.gif"  style="float:right; margin:-40px" /> </a>
+ </li>
+`)
 })

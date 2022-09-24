@@ -44,3 +44,15 @@ li {
 .stack {
   padding-left: 25px;
 }
+
+@media screen and (max-width: 720px) {
+  .thumbnail img {
+    max-width: 200px;
+    border: 2px solid #60ff42;
+    max-height: 400px;
+    border-radius: 10px;
+  }
+  .back {
+    margin: 30px;
+  }
+}

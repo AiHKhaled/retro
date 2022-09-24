@@ -48,7 +48,6 @@ body {
   cursor: pointer;
 }
 .intro {
-  display: block;
   font-size: 15px;
   line-height: 2;
 }
@@ -103,9 +102,21 @@ footer span {
 }
 
 @media screen and (max-width: 720px) {
+  body {
+    padding: 5px;
+    margin: 15px;
+  }
   .middle {
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
   }
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
