@@ -1,5 +1,3 @@
-import { corpus } from './data.js'
-
 const links = document.querySelector('.links')
 
 const headers = [
@@ -32,15 +30,6 @@ function headerLinks() {
   })
 }
 
-function godSpeak() {
-  var godsong = ''
-  for (i = 0; i < 32; i++) {
-    index = Math.floor(Math.random() * corpus.length)
-    godsong = godsong + ' ' + corpus[index]
-  }
-  document.getElementById('godSpeakDisplay').textContent = godsong
-}
-
 headerLinks()
 
-export default (headerLinks, godSpeak)
+export default headerLinks
