@@ -1,19 +1,15 @@
-<script
-  src="https://code.jquery.com/jquery-3.6.1.min.js"
-  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-  crossorigin="anonymous"
-></script>
-<script>
-  $(function () {
-    var link = 'header.html'
-    $('.head').load(link)
-    $('footer').load('footer.html')
-  })
-</script>
+
 <link rel="stylesheet" href="/about.css">
+<link rel="stylesheet" type="text/css" href="style.css" />
+
 <link rel="shortcut icon" href="/stickers/chad.png" />
 
 <title> About</title>
+<div class="loader-wrapper">
+  <span class="loader"><span class="loader-inner"></span></span>
+</div>
+ 
+
 <p class="head" style="padding: 0; margin:0;"/>
  
 <h1>About Me </h1>
@@ -64,6 +60,24 @@
      
    
     <footer />
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"
+></script>
+<script>
+  $(function () {
+    var link = 'header.html'
+    $('.head').load(link)
+    $('footer').load('footer.html')
+  })
+ $(window).on('load', function () {
+       
+            $(".load-wrapper").fadeOut('slow');
+            $('body').css('overflow', 'auto');
+        })
+    
   
+</script>
   </body>
   

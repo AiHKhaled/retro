@@ -1,5 +1,4 @@
 const links = document.querySelector('.links')
-
 const headers = [
   { name: '', gif: 'home.png', link: 'index.html' },
   { name: '', gif: 'projects.gif', link: 'projects.html' },
