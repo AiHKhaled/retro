@@ -24,3 +24,21 @@
 .socials img:hover {
   transform: scale(1.2);
 }
+
+#contact-fields {
+  height: 30px;
+  border-style: none;
+  border-bottom: 1px solid white;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 5px 10px 5px 10px;
+  width: fit-content;
+}
+button:hover {
+  background-color: green;
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
