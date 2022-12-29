@@ -1,5 +1,14 @@
 export var projects = [
   {
+    title: 'Photographer',
+    content:
+      'My latest project, A dynamic and professional-looking photography portfolio website that showcases a collection of photographs in an organized and visually appealing way. Made with SvelteKit, Tailwind, and TypeScript, ',
+
+    link: 'https://photographer-aihkhaled.vercel.app',
+    stacks: ['/coding.png', '/Svelte.png', '/Tailwind.png', '/typescript.png'],
+    thumbnails: ['../pages/photographer.png'],
+  },
+  {
     title: 'VetrinaLive',
     content:
       'A dashboard assignment for lasting dynamics academy, I used typescript, Context Api along with useReducer in order to manage complex state, and pass data between children and parents, I used Material UI for the layout and the outlook of the website. You can check it out by clicking on the name of the project.',

@@ -26,5 +26,9 @@
       $('footer').load('footer.html')
     })
   </script>
-  <script src="./scripts/loader.js"></script>
+  <script>
+    $(window).on('load', function () {
+      $('.loader-wrapper').fadeOut('slow')
+    })
+  </script>
 </body>
