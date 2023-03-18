@@ -1,34 +1,47 @@
 <link rel="stylesheet" href="styles/projects.css" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 
+<script src="//unpkg.com/alpinejs" defer></script>
 <link rel="shortcut icon" href="/stickers/favicon14.ico" />
 <title>Projects</title>
-<body>
-  <div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span></span>
+<body x-data="{ loaded: false }">
+  <div class="loader" x-show="!loaded" id="loader">
+    <div class="spinner"></div>
   </div>
-  <p class="intro" />
-  <h1>Projects</h1>
-  <ul class="cards"></ul>
+  <div id="content" x-show="loaded">
+    <p class="intro" />
+    <h1>Projects</h1>
+    <ul class="cards"></ul>
 
-  <footer />
-  <script defer type="module" src="scripts/card.js"></script>
-  <script
-    src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"
-  ></script>
+    <footer />
+  </div>
 
   <script defer>
-    $(function () {
+    document.addEventListener('DOMContentLoaded', function () {
       var link = 'header.html'
-      $('.intro').load(link)
-      $('footer').load('footer.html')
+      var intro = document.querySelector('.intro')
+      var footer = document.querySelector('footer')
+      intro.innerHTML = ''
+      footer.innerHTML = ''
+      fetch(link)
+        .then((response) => response.text())
+        .then((data) => (intro.innerHTML = data))
+      fetch('footer.html')
+        .then((response) => response.text())
+        .then((data) => (footer.innerHTML = data))
     })
   </script>
+
+  <script defer type="module" src="scripts/card.js"></script>
   <script>
-    $(window).on('load', function () {
-      $('.loader-wrapper').fadeOut('slow')
-    })
+    // Simulate a delay (replace this with your actual content loading logic)
+    setTimeout(() => {
+      // Hide the loader
+      document.getElementById('loader').style.display = 'none'
+      // Show the content
+      document.getElementById('content').style.display = 'block'
+      // Set the loaded state to true
+      Alpine.data('loaded', () => ({ loaded: true }))
+    }, 2000) // 2 seconds delay
   </script>
 </body>

@@ -1,10 +1,34 @@
 
 <link rel="shortcut icon" href="/stickers/chad.png" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-
+ 
+  <script src="//unpkg.com/alpinejs" defer></script>
 <title> Home</title>
 
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="spinner"></div>
+</div>
 
+<!-- Content -->
+<div class="content" id="content">
+  <!-- Your portfolio page content here -->
+</div>
+<div x-data>
+  <div x-ref="header" x-init="() => {
+    fetch('header.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(html => {
+        $refs.header.innerHTML = html;
+      })
+      .catch(error => console.error('Error loading header.html:', error));
+  }"></div>
+  </div>
 
 <p class="head" style="padding: 0; margin:0;"/>
  
@@ -53,24 +77,46 @@
       
       </div>
       
+      <div x-data>
+        <footer x-ref="footer" x-init="() => {
+          fetch('footer.html')
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              return response.text();
+            })
+            .then(html => {
+              $refs.footer.innerHTML = html;
+            })
+            .catch(error => console.error('Error loading footer.html:', error));
+        }">
+      </footer>
+      </div>
+      
    
-   
-      <footer />    
+     
     <script  src='scripts/stickerGenerator.js'></script>
-    <script
-src="https://code.jquery.com/jquery-3.6.1.min.js"
-integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-crossorigin="anonymous"
-></script>
-<script>
-  $(function () {
-    var link = 'header.html'
-    $('.head').load(link)
-    $("footer").load("footer.html")
-  })
-</script>   
+    <script>
+      // Get the loader and content elements
+const loader = document.getElementById("loader");
+const content = document.getElementById("content");
 
-<script src="./scripts/loader.js"> 
+// Hide the content until it's loaded
+content.style.display = "none";
+
+// Show the loader
+loader.style.display = "flex";
+
+// Simulate a delay (replace this with your actual content loading logic)
+setTimeout(() => {
+  // Hide the loader
+  loader.style.display = "none";
+  // Show the content
+  content.style.display = "block";
+}, 1000); // 2 seconds delay
+    </script>
+   
 </script>
   </body>
   

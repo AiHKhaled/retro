@@ -14,7 +14,6 @@ body {
   margin: 100px 150px 0 150px;
   padding: 0;
   scroll-behavior: smooth;
-  overflow-y: hidden;
 }
 
 .header {
@@ -31,6 +30,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   border: 5px solid white;
+}
+.nav {
+  height: 32px;
+  width: 80px;
+  margin-bottom: 8px;
 }
 .links {
   display: flex;
@@ -124,75 +128,32 @@ footer span {
 .content {
   display: none;
 }
-.loader-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #000;
+
+/* Loader */
+.loader {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #fff;
-  animation: loader 2s infinite ease;
-}
-
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
   background-color: #fff;
-  animation: loader-inner 2s infinite ease-in;
+  z-index: 9999;
 }
 
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(180deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  75% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s ease-in-out infinite;
 }
 
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-
-  25% {
-    height: 0%;
-  }
-
-  50% {
-    height: 100%;
-  }
-
-  75% {
-    height: 100%;
-  }
-
-  100% {
-    height: 0%;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

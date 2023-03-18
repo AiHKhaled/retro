@@ -12,30 +12,47 @@ function createCard(title, content, link, thumbnails, stack) {
             `
 }
 
-$(document).ready(function () {
-  projects.forEach((project) => {
-    $('.cards').append(
-      $(
-        createCard(
-          project.title,
-          project.content,
-          project.link,
-          project.thumbnails
-            ?.map((thumb) => `<img src='${thumb}'  /> `)
-            .join(''),
-          project.stacks
-            ?.map(
-              (stack) => `<img src='../stacks${stack}' class="card-img" /> `
-            )
-            .join('')
-        )
-      )
-    )
-  })
-  $('.cards').append(`
-  <li class='back'>
- 
- <a href="index.html"> <img src="back.gif"  style="float:right; margin:-40px" /> </a>
- </li>
-`)
+document.addEventListener('DOMContentLoaded', function () {
+  const cardsContainer = document.querySelector('.cards')
+
+  for (const project of projects) {
+    const card = document.createElement('div')
+    card.classList.add('card')
+
+    const thumbnailImages = project.thumbnails
+      ?.map((thumb) => `<img src='${thumb}' />`)
+      .join('')
+
+    const stackImages = project.stacks
+      ?.map((stack) => `<img src='../stacks${stack}' class="card-img"  />`)
+      .join('')
+
+    card.innerHTML = `
+      <div class="card-body">
+        <h5 class="card-title">${project.title}</h5>
+        <p class="card-text">${project.content}</p>
+        <a href="${project.link}" class="btn btn-primary">Learn more</a>
+      </div>
+      ${
+        thumbnailImages ? `<div class="thumbnail">${thumbnailImages}</div>` : ''
+      }
+      ${stackImages ? `<div class="stack-container">${stackImages}</div>` : ''}
+    `
+
+    cardsContainer.appendChild(card)
+  }
+
+  const backLink = document.createElement('a')
+  backLink.href = 'index.html'
+  const backImage = document.createElement('img')
+  backImage.src = 'back.gif'
+  backImage.style.float = 'right'
+  backImage.style.margin = '-40px'
+  backLink.appendChild(backImage)
+
+  const backListItem = document.createElement('li')
+  backListItem.classList.add('back')
+  backListItem.appendChild(backLink)
+
+  cardsContainer.appendChild(backListItem)
 })
