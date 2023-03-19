@@ -6,6 +6,7 @@
 }
 * {
   font-family: Monolisa;
+  font-display: swap;
   background-color: black;
   color: #60ff42;
 }
@@ -78,7 +79,7 @@ footer a {
   color: rgb(255, 204, 153);
 }
 footer span {
-  color: rgb(102, 102, 53);
+  color: #ffcc99;
 }
 
 .stickersContainer {

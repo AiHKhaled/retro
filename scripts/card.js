@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
     card.classList.add('card')
 
     const thumbnailImages = project.thumbnails
-      ?.map((thumb) => `<img src='${thumb}' />`)
+      ?.map((thumb) => `<img src='${thumb}' alt='${thumb}' />`)
       .join('')
 
     const stackImages = project.stacks
-      ?.map((stack) => `<img src='../stacks${stack}' class="card-img"  />`)
+      ?.map((stack) => `<img src='../stacks${stack}' alt='${stack}' class="card-img"  />`)
       .join('')
 
     card.innerHTML = `
@@ -33,8 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p class="card-text">${project.content}</p>
         <a href="${project.link}" class="btn btn-primary">Learn more</a>
       </div>
-      ${
-        thumbnailImages ? `<div class="thumbnail">${thumbnailImages}</div>` : ''
+      ${thumbnailImages ? `<div class="thumbnail">${thumbnailImages}</div>` : ''
       }
       ${stackImages ? `<div class="stack-container">${stackImages}</div>` : ''}
     `
