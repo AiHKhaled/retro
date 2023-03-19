@@ -20,6 +20,7 @@ function generator() {
     sticker.style.maxWidth = '81px'
 
     sticker.setAttribute('src', i)
+    sticker.setAttribute('alt', i)
 
     stickersContainer.append(sticker)
   })
