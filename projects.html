@@ -1,63 +1,63 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="I'm a frontend developer with a focus on responsive design and accessibility. and uses React primarily"
-  />
-  <meta
-    name="keywords"
-    content="web development, frontend, HTML, CSS, JavaScript, responsive design, accessibility, React, Qwik, SvelteKit, Nextjs, TaiwlindCss, MaterialUI"
-  />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I'm a frontend developer with a focus on responsive design and accessibility. and uses React primarily"
+    />
+    <meta
+      name="keywords"
+      content="web development, frontend, HTML, CSS, JavaScript, responsive design, accessibility, React, Qwik, SvelteKit, Nextjs, TaiwlindCss, MaterialUI"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="styles/projects.css" />
+    <link rel="shortcut icon" href="/stickers/favicon14.ico" />
+    <title>Projects</title>
+  </head>
 
-<link rel="stylesheet" href="styles/projects.css" />
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <body x-data="{ loaded: false }">
+    <div class="loader" x-show="!loaded" id="loader">
+      <div class="spinner"></div>
+    </div>
+    <div id="content" x-show="loaded">
+      <p class="intro" />
+      <h1>Projects</h1>
+      <ul class="cards"></ul>
 
-<script src="//unpkg.com/alpinejs" defer></script>
-<link rel="shortcut icon" href="/stickers/favicon14.ico" />
-<title>Projects</title>
-<body x-data="{ loaded: false }">
-  <div class="loader" x-show="!loaded" id="loader">
-    <div class="spinner"></div>
-  </div>
-  <div id="content" x-show="loaded">
-    <p class="intro" />
-    <h1>Projects</h1>
-    <ul class="cards"></ul>
+      <footer />
+    </div>
 
-    <footer />
-  </div>
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function () {
+        var link = 'header.html'
+        var intro = document.querySelector('.intro')
+        var footer = document.querySelector('footer')
+        intro.innerHTML = ''
+        footer.innerHTML = ''
+        fetch(link)
+          .then((response) => response.text())
+          .then((data) => (intro.innerHTML = data))
+        fetch('footer.html')
+          .then((response) => response.text())
+          .then((data) => (footer.innerHTML = data))
+      })
+    </script>
 
-  <script defer>
-    document.addEventListener('DOMContentLoaded', function () {
-      var link = 'header.html'
-      var intro = document.querySelector('.intro')
-      var footer = document.querySelector('footer')
-      intro.innerHTML = ''
-      footer.innerHTML = ''
-      fetch(link)
-        .then((response) => response.text())
-        .then((data) => (intro.innerHTML = data))
-      fetch('footer.html')
-        .then((response) => response.text())
-        .then((data) => (footer.innerHTML = data))
-    })
-  </script>
-
-  <script defer type="module" src="scripts/card.js"></script>
-  <script>
-    // Simulate a delay (replace this with your actual content loading logic)
-    setTimeout(() => {
-      // Hide the loader
-      document.getElementById('loader').style.display = 'none'
-      // Show the content
-      document.getElementById('content').style.display = 'block'
-      // Set the loaded state to true
-      Alpine.data('loaded', () => ({ loaded: true }))
-    }, 2000) // 2 seconds delay
-  </script>
-</body>
+    <script defer type="module" src="scripts/card.js"></script>
+    <script>
+      // Simulate a delay (replace this with your actual content loading logic)
+      setTimeout(() => {
+        // Hide the loader
+        document.getElementById('loader').style.display = 'none'
+        // Show the content
+        document.getElementById('content').style.display = 'block'
+        // Set the loaded state to true
+        Alpine.data('loaded', () => ({ loaded: true }))
+      }, 2000) // 2 seconds delay
+    </script>
+  </body>
+</html>
