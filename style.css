@@ -22,9 +22,9 @@ body {
 }
 
 .title {
-  padding-left: 25%;
+  text-align: center;
   font-family: 'Combo', cursive;
-  font-size: 30px;
+  font-size: 50px;
 }
 .gif {
   display: block;
