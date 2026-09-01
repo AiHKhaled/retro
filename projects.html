@@ -1,63 +1,416 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="I'm a frontend developer with a focus on responsive design and accessibility. and uses React primarily"
-    />
-    <meta
-      name="keywords"
-      content="web development, frontend, HTML, CSS, JavaScript, responsive design, accessibility, React, Qwik, SvelteKit, Nextjs, TaiwlindCss, MaterialUI"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="styles/projects.css" />
-    <link rel="shortcut icon" href="/stickers/favicon14.ico" />
-    <title>Projects</title>
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Selected Projects — Khaled Ait Hammou</title>
+        <meta
+            name="description"
+            content="Selected frontend and full-stack work by Khaled Ait Hammou: government platforms, ticketing, mobile marketplaces, food ordering, and e-commerce systems."
+        />
+        <meta name="author" content="Khaled Ait Hammou" />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta name="theme-color" content="#1e1e1e" />
 
-  <body x-data="{ loaded: false }">
-    <div class="loader" x-show="!loaded" id="loader">
-      <div class="spinner"></div>
-    </div>
-    <div id="content" x-show="loaded">
-      <p class="intro" />
-      <h1>Projects</h1>
-      <ul class="cards"></ul>
+        <link
+            rel="canonical"
+            href="https://portfolio.ahktec.com/projects.html"
+        />
+        <link
+            rel="alternate"
+            hreflang="en"
+            href="https://portfolio.ahktec.com/projects.html"
+        />
+        <link rel="stylesheet" href="style.css?v=20260821" />
+        <link rel="stylesheet" href="styles/projects.css?v=20260821" />
+        <link rel="shortcut icon" href="stickers/favicon14.ico" />
 
-      <footer />
-    </div>
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Khaled Ait Hammou — Portfolio" />
+        <meta
+            property="og:title"
+            content="Selected Projects — Khaled Ait Hammou"
+        />
+        <meta
+            property="og:description"
+            content="Six production-minded platforms spanning government workflows, ticketing, mobile marketplaces, food ordering, and e-commerce."
+        />
+        <meta
+            property="og:url"
+            content="https://portfolio.ahktec.com/projects.html"
+        />
+        <meta
+            property="og:image"
+            content="https://portfolio.ahktec.com/social-card.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="Selected work by Khaled Ait Hammou"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Selected Projects — Khaled Ait Hammou"
+        />
+        <meta
+            name="twitter:description"
+            content="Government platforms, ticketing, marketplaces, food ordering, and e-commerce systems."
+        />
+        <meta
+            name="twitter:image"
+            content="https://portfolio.ahktec.com/social-card.png"
+        />
 
-    <script defer>
-      document.addEventListener('DOMContentLoaded', function () {
-        var link = 'header.html'
-        var intro = document.querySelector('.intro')
-        var footer = document.querySelector('footer')
-        intro.innerHTML = ''
-        footer.innerHTML = ''
-        fetch(link)
-          .then((response) => response.text())
-          .then((data) => (intro.innerHTML = data))
-        fetch('footer.html')
-          .then((response) => response.text())
-          .then((data) => (footer.innerHTML = data))
-      })
-    </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "@id": "https://portfolio.ahktec.com/projects.html#page",
+                "url": "https://portfolio.ahktec.com/projects.html",
+                "name": "Selected Projects — Khaled Ait Hammou",
+                "description": "Selected production frontend and full-stack work by Khaled Ait Hammou.",
+                "dateModified": "2026-08-22",
+                "inLanguage": "en",
+                "author": {
+                    "@type": "Person",
+                    "@id": "https://portfolio.ahktec.com/#person",
+                    "name": "Khaled Ait Hammou",
+                    "url": "https://portfolio.ahktec.com/"
+                },
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "numberOfItems": 6,
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "IATF Contracts Platform",
+                            "url": "https://iatf-contracts.dz"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "AAPI Investor Portal",
+                            "url": "https://invest.gov.dz/investor"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "SwimAccess",
+                            "url": "https://swimaccess.digiticket.dz"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 4,
+                            "name": "NutriConnect"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 5,
+                            "name": "OnlySkills"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 6,
+                            "name": "SoukTicket"
+                        }
+                    ]
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <div class="loader" id="loader" aria-hidden="true">
+            <div class="spinner"></div>
+        </div>
 
-    <script defer type="module" src="scripts/card.js"></script>
-    <script>
-      // Simulate a delay (replace this with your actual content loading logic)
-      setTimeout(() => {
-        // Hide the loader
-        document.getElementById('loader').style.display = 'none'
-        // Show the content
-        document.getElementById('content').style.display = 'block'
-        // Set the loaded state to true
-        Alpine.data('loaded', () => ({ loaded: true }))
-      }, 2000) // 2 seconds delay
-    </script>
-  </body>
+        <div class="content" id="content">
+            <div id="site-header"></div>
+            <main id="main-content">
+                <h1>Selected Projects</h1>
+                <p class="projects-intro">
+                    Selected frontend and full-stack works by Khaled Ait Hammou,
+                    a Senior Frontend Engineer in Algeria.
+                    <a href="about.html">About Khaled</a>.
+                </p>
+                <ul class="cards">
+                    <li class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">IATF Contracts Platform</h2>
+                            <p class="card-text">
+                                An export-contract tracking platform built from
+                                scratch to production. I led the frontend,
+                                contributed to API response design, and defined
+                                frontend-backend contracts for exporter and
+                                institutional workflows.
+                            </p>
+                            <a
+                                href="https://iatf-contracts.dz"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Learn more</a
+                            >
+                        </div>
+                        <div
+                            class="stack-container"
+                            aria-label="Technologies used"
+                        >
+                            <img
+                                src="stacks/coding.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/Tailwind.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/typescript.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </li>
+
+                    <li class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">AAPI Investor Portal</h2>
+                            <p class="card-text">
+                                The investor-facing module of Algeria&apos;s
+                                investment platform. I owned the UI and UX,
+                                integrated Keycloak authentication and APIs, and
+                                managed the complete frontend data flow and
+                                state.
+                            </p>
+                            <a
+                                href="https://invest.gov.dz/investor"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Learn more</a
+                            >
+                        </div>
+                        <div
+                            class="stack-container"
+                            aria-label="Technologies used"
+                        >
+                            <img
+                                src="stacks/coding.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/atom.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/typescript.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </li>
+
+                    <li class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">SwimAccess</h2>
+                            <p class="card-text">
+                                A public ticketing platform delivered within a
+                                one-week deadline. I built the complete frontend
+                                and Redux booking flow for a stable production
+                                service used by more than 500 people daily.
+                            </p>
+                            <a
+                                href="https://swimaccess.digiticket.dz"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Learn more</a
+                            >
+                        </div>
+                        <div
+                            class="stack-container"
+                            aria-label="Technologies used"
+                        >
+                            <img
+                                src="stacks/coding.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/atom.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/typescript.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </li>
+
+                    <li class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">NutriConnect</h2>
+                            <p class="card-text">
+                                A full-featured food ordering platform with
+                                real-time order tracking and database
+                                optimization, built with React Native, Laravel,
+                                PostgreSQL, and Docker.
+                            </p>
+                            <span class="project-availability"
+                                >Selected case summary — public link
+                                unavailable</span
+                            >
+                        </div>
+                        <div
+                            class="stack-container"
+                            aria-label="Technologies used"
+                        >
+                            <img
+                                src="stacks/reactnative.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/coding.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </li>
+
+                    <li class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">OnlySkills</h2>
+                            <p class="card-text">
+                                A mobile marketplace connecting service workers
+                                with clients through real-time chat,
+                                geolocation, and Row Level Security.
+                            </p>
+                            <span class="project-availability"
+                                >Selected case summary — public link
+                                unavailable</span
+                            >
+                        </div>
+                        <div
+                            class="stack-container"
+                            aria-label="Technologies used"
+                        >
+                            <img
+                                src="stacks/reactnative.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/typescript.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </li>
+
+                    <li class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">SoukTicket</h2>
+                            <p class="card-text">
+                                An e-commerce platform with payment processing,
+                                GPS location selection, and inventory
+                                management, built with Next.js and Strapi.
+                            </p>
+                            <span class="project-availability"
+                                >Selected case summary — public link
+                                unavailable</span
+                            >
+                        </div>
+                        <div
+                            class="stack-container"
+                            aria-label="Technologies used"
+                        >
+                            <img
+                                src="stacks/coding.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/atom.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <img
+                                src="stacks/typescript.png"
+                                alt=""
+                                class="card-img"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </li>
+
+                    <li class="back">
+                        <a href="index.html" aria-label="Back to home">
+                            <img
+                                src="back.gif"
+                                alt="back"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </main>
+            <div id="site-footer"></div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", async () => {
+                const [header, footer] = await Promise.all([
+                    fetch("header.html").then((response) => response.text()),
+                    fetch("footer.html").then((response) => response.text()),
+                ])
+                document.getElementById("site-header").innerHTML = header
+                document.getElementById("site-footer").innerHTML = footer
+            })
+        </script>
+        <script src="scripts/loader.js?v=20260815b"></script>
+    </body>
 </html>

@@ -1,141 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="I'm a frontend developer with a focus on responsive design and accessibility. and uses React primarily"
-    />
-    <meta
-      name="keywords"
-      content="web development, frontend, HTML, CSS, JavaScript, responsive design, accessibility, React, Qwik, SvelteKit, Nextjs, TaiwlindCss, MaterialUI"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Khaled Ait Hammou — Senior Frontend Engineer in Algeria</title>
+        <meta
+            name="description"
+            content="Portfolio of Khaled Ait Hammou, a Senior Frontend Engineer in Algiers building production React, Next.js and TypeScript platforms for government and B2B teams."
+        />
+        <meta name="author" content="Khaled Ait Hammou" />
+        <meta
+            name="keywords"
+            content="Khaled Ait Hammou, senior frontend engineer, frontend developer Algeria, React, Next.js, TypeScript, SvelteKit, API architecture"
+        />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta name="theme-color" content="#1e1e1e" />
 
+        <link rel="canonical" href="https://portfolio.ahktec.com/" />
+        <link
+            rel="alternate"
+            hreflang="en"
+            href="https://portfolio.ahktec.com/"
+        />
+        <link
+            rel="alternate"
+            hreflang="x-default"
+            href="https://portfolio.ahktec.com/"
+        />
+        <link rel="shortcut icon" href="stickers/chad.png" />
+        <link rel="stylesheet" href="style.css?v=20260821" />
 
-  
-  <link rel="shortcut icon" href="/stickers/chad.png" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-   
-    <script src="//unpkg.com/alpinejs" defer></script>
-</head>
-<title> Home</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Khaled Ait Hammou — Portfolio" />
+        <meta
+            property="og:title"
+            content="Khaled Ait Hammou — Senior Frontend Engineer"
+        />
+        <meta
+            property="og:description"
+            content="Production frontend engineering for government platforms, B2B systems, and ambitious digital products."
+        />
+        <meta property="og:url" content="https://portfolio.ahktec.com/" />
+        <meta
+            property="og:image"
+            content="https://portfolio.ahktec.com/social-card.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="Khaled Ait Hammou, Senior Frontend Engineer"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Khaled Ait Hammou — Senior Frontend Engineer"
+        />
+        <meta
+            name="twitter:description"
+            content="Production frontend engineering for government platforms, B2B systems, and ambitious digital products."
+        />
+        <meta
+            name="twitter:image"
+            content="https://portfolio.ahktec.com/social-card.png"
+        />
 
-<!-- Loader -->
-<div class="loader" id="loader">
-  <div class="spinner"></div>
-</div>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://portfolio.ahktec.com/#person",
+                        "name": "Khaled Ait Hammou",
+                        "url": "https://portfolio.ahktec.com/",
+                        "email": "mailto:aithammouk40@gmail.com",
+                        "jobTitle": "Senior Frontend Engineer",
+                        "sameAs": [
+                            "https://github.com/aihkhaled",
+                            "https://www.linkedin.com/in/aihk",
+                            "https://www.instagram.com/s0m3b0dy_once/"
+                        ],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Algiers",
+                            "addressCountry": "DZ"
+                        },
+                        "alumniOf": {
+                            "@type": "CollegeOrUniversity",
+                            "name": "Université Ibn Khaldoun, Tiaret"
+                        }
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://portfolio.ahktec.com/#website",
+                        "url": "https://portfolio.ahktec.com/",
+                        "name": "Khaled Ait Hammou — Portfolio",
+                        "alternateName": "Khaled Ait Hammou Portfolio",
+                        "description": "Portfolio of Khaled Ait Hammou, a Senior Frontend Engineer in Algiers, Algeria.",
+                        "inLanguage": "en",
+                        "author": {
+                            "@id": "https://portfolio.ahktec.com/#person"
+                        }
+                    }
+                ]
+            }
+        </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
 
-<!-- Content -->
-<div class="content" id="content">
-  <!-- Your portfolio page content here -->
-</div>
-<div x-data>
-  <div x-ref="header" x-init="() => {
-    fetch('header.html')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.text();
-      })
-      .then(html => {
-        $refs.header.innerHTML = html;
-      })
-      .catch(error => console.error('Error loading header.html:', error));
-  }"></div>
-  </div>
+        <div class="loader" id="loader" aria-hidden="true">
+            <div class="spinner"></div>
+        </div>
 
-<p class="head" style="padding: 0; margin:0;"/>
- 
-<h1>About this website </h1>
+        <div class="content" id="content">
+            <div id="site-header"></div>
 
-    <p class="intro">
-      Many web users nowadays looks back on the days of Web 1.0 and cringe at the likes of Geocities and Angelfire. But there is something in those old platforms and the websites that they contained that seems to be absent from the modern web. 
-      <br>
-      the old web focused more on individuals and individuality, whereas the new web is less individual and much more commercial. <br>
-      the Web 1.0 style allows much more space for someone to make their online presence exactly how they want it.
-      so this is an ode to what was once the internet, how sites were in the
-      first days. 
-      I felt nostalgic for those days, so I made one that
-      resembles them, a question of keeping the torch burning, and I hope the
-      sentiment will get through to those who visit.
-      <br>
-    </p>
+            <main id="main-content">
+                <div class="intro hero">
+                    <h1>Khaled Ait Hammou</h1>
+                    <p>
+                        Khaled Ait Hammou is a Senior Frontend Engineer in
+                        Algiers, Algeria, building production React, Next.js,
+                        TypeScript, and SvelteKit platforms for government and
+                        B2B teams.
+                        <span class="hero-actions">
+                            <a href="projects.html">View selected projects →</a>
+                            <a href="about.html">About me →</a>
+                        </span>
+                    </p>
+                </div>
 
+                <p class="intro">
+                    Many web users nowadays look back on the days of Web 1.0 and
+                    cringe at the likes of Geocities and Angelfire. But there is
+                    something in those old platforms and the websites that they
+                    contained that seems to be absent from the modern web.
+                    <br />
+                    The old web focused more on individuals and individuality,
+                    whereas the new web is less individual and much more
+                    commercial.
+                    <br />
+                    The Web 1.0 style allows much more space for someone to make
+                    their online presence exactly how they want it. So this is
+                    an ode to what was once the internet and how sites were in
+                    its first days. I felt nostalgic for those days, so I made
+                    one that resembles them—a question of keeping the torch
+                    burning—and I hope the sentiment gets through to those who
+                    visit.
+                </p>
 
+                <div class="intro">
+                    <p>
+                        A little bit <a href="about.html">about me</a> and where
+                        to reach me.
+                    </p>
+                    <div class="about">
+                        <h2>Website guide</h2>
+                        <ul>
+                            <li>
+                                Designed and built using only HTML, CSS, and
+                                JavaScript.
+                            </li>
+                            <li>
+                                If you're wondering what these types of websites
+                                are called, look no further:
+                                <a
+                                    href="https://motherfuckingwebsite.com/"
+                                    >minimalist.</a
+                                >
+                            </li>
+                            <li>
+                                Self-hosted at
+                                <a href="https://portfolio.ahktec.com/"
+                                    >portfolio.ahktec.com</a
+                                >.
+                            </li>
+                        </ul>
+                    </div>
+                    <h2>Still building</h2>
+                    <ul class="intro">
+                        <li>Notes on frontend architecture and shipping will appear on the blog.</li>
+                    </ul>
+                    <div class="stickersContainer" aria-hidden="true"></div>
+                </div>
+            </main>
 
-    
+            <div id="site-footer"></div>
+        </div>
 
-    <div class="intro" >
-      <p >a little bit <a href="about.html"> about me </a> and where to reach me </p> 
-      <div class="about">
-        <h3>website guide</h3>
-        <ul>
-            <li> Designed and built using only html, css and javascript. </li>
-          <li>
-            if you're wondering what these types of websites are called, look
-            no further.
-            <a
-            href="http://motherfuckingwebsite.com/"
-            style="color: rgb(255, 204, 153)"
-            >minimalist.</a
-            >
-          </li>
-          <li>Hosted by <a href="Netlify.com">Netlify.</a></li>
-        </ul>
-      </div>
-      <h4>work to be done:</h4>
-      <ul class="intro">
-      <li> making the blogs page </li>
-    </ul>
-        <div class="stickersContainer"></div>
-      
-      </div>
-      
-      <div x-data>
-        <footer x-ref="footer" x-init="() => {
-          fetch('footer.html')
-            .then(response => {
-              if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-              }
-              return response.text();
+        <script>
+            document.addEventListener("DOMContentLoaded", async () => {
+                const [header, footer] = await Promise.all([
+                    fetch("header.html").then((response) => response.text()),
+                    fetch("footer.html").then((response) => response.text()),
+                ])
+                document.getElementById("site-header").innerHTML = header
+                document.getElementById("site-footer").innerHTML = footer
             })
-            .then(html => {
-              $refs.footer.innerHTML = html;
-            })
-            .catch(error => console.error('Error loading footer.html:', error));
-        }">
-      </footer>
-      </div>
-      
-   
-     
-    <script  src='scripts/stickerGenerator.js'></script>
-    <script>
-      // Get the loader and content elements
-const loader = document.getElementById("loader");
-const content = document.getElementById("content");
-
-// Hide the content until it's loaded
-content.style.display = "none";
-
-// Show the loader
-loader.style.display = "flex";
-
-// Simulate a delay (replace this with your actual content loading logic)
-setTimeout(() => {
-  // Hide the loader
-  loader.style.display = "none";
-  // Show the content
-  content.style.display = "block";
-}, 1000); // 2 seconds delay
-    </script>
-   
-</script>
-  </body>
-  
+        </script>
+        <script src="scripts/stickerGenerator.js"></script>
+        <script src="scripts/loader.js?v=20260815b"></script>
+    </body>
+</html>

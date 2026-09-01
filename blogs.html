@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blogs — Khaled Ait Hammou</title>
+    <meta name="description" content="Notes and writing by Khaled Ait Hammou. The blog is currently being prepared." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://portfolio.ahktec.com/blogs.html" />
+    <link rel="shortcut icon" href="stickers/favicon14.ico" />
+    <link rel="stylesheet" href="style.css?v=20260821" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <main id="main-content">
+      <div id="site-header"></div>
+      <h1>Blogs</h1>
+      <p class="intro">
+        This corner is still under construction. Notes on frontend architecture, interfaces, and shipping production software will appear here soon.
+      </p>
+      <p class="intro"><a href="projects.html">In the meantime, browse the projects.</a></p>
+      <div id="site-footer"></div>
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        const [header, footer] = await Promise.all([
+          fetch('header.html').then((response) => response.text()),
+          fetch('footer.html').then((response) => response.text()),
+        ])
+        document.getElementById('site-header').innerHTML = header
+        document.getElementById('site-footer').innerHTML = footer
+      })
+    </script>
+  </body>
+</html>

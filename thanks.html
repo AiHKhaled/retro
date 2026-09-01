@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Message sent — Khaled Ait Hammou</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="shortcut icon" href="stickers/favicon14.ico" />
+    <link rel="stylesheet" href="style.css?v=20260821" />
+  </head>
+  <body>
+    <main id="main-content">
+      <div id="site-header"></div>
+      <h1>Thank you</h1>
+      <p class="intro">Your message has been sent. I’ll get back to you as soon as I can.</p>
+      <p class="intro"><a href="index.html">Back to the home page.</a></p>
+      <div id="site-footer"></div>
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        const [header, footer] = await Promise.all([
+          fetch('header.html').then((response) => response.text()),
+          fetch('footer.html').then((response) => response.text()),
+        ])
+        document.getElementById('site-header').innerHTML = header
+        document.getElementById('site-footer').innerHTML = footer
+      })
+    </script>
+  </body>
+</html>

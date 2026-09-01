@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Khaled Ait Hammou — Senior Frontend Engineer</title>
+  <desc id="desc">A dark green social card with an acid green grid and editorial typography.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#a8ff60" stroke-opacity=".08"/>
+    </pattern>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(990 80) rotate(130) scale(530)">
+      <stop stop-color="#77d93e" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#07100b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#07100b"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="54" y="54" width="1092" height="522" fill="none" stroke="#a8ff60" stroke-opacity=".34"/>
+  <path d="M1098 54h48v48z" fill="#a8ff60"/>
+  <rect x="86" y="88" width="92" height="56" fill="#a8ff60"/>
+  <text x="105" y="124" fill="#07100b" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="700">K/AH</text>
+  <text x="86" y="212" fill="#a8ff60" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="700" letter-spacing="3">ALGIERS · SENIOR FRONTEND ENGINEER</text>
+  <text x="80" y="322" fill="#f1ead8" font-family="DejaVu Sans, sans-serif" font-size="74" font-weight="700" letter-spacing="-4">Khaled Ait Hammou</text>
+  <text x="84" y="400" fill="#a9b5aa" font-family="DejaVu Sans Mono, monospace" font-size="26">Interfaces for systems people rely on.</text>
+  <line x1="86" y1="474" x2="1114" y2="474" stroke="#a8ff60" stroke-opacity=".25"/>
+  <text x="86" y="525" fill="#a8ff60" font-family="DejaVu Sans Mono, monospace" font-size="17">REACT / NEXT.JS / TYPESCRIPT / API ARCHITECTURE</text>
+  <text x="1114" y="525" fill="#a9b5aa" text-anchor="end" font-family="DejaVu Sans Mono, monospace" font-size="17">portfolio.ahktec.com</text>
+</svg>

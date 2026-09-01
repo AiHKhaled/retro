@@ -13,16 +13,16 @@ const stickers = [
 
 const stickersContainer = document.querySelector('.stickersContainer')
 
-function generator() {
-  stickers.forEach((i) => {
-    let sticker = document.createElement('img')
+if (stickersContainer) {
+  for (const source of stickers) {
+    const sticker = document.createElement('img')
     sticker.style.border = '1px solid rgb(255, 204, 153)'
     sticker.style.maxWidth = '81px'
-
-    sticker.setAttribute('src', i)
-    sticker.setAttribute('alt', i)
-
+    sticker.setAttribute('src', source)
+    sticker.setAttribute('alt', '')
+    sticker.setAttribute('aria-hidden', 'true')
+    sticker.setAttribute('loading', 'lazy')
+    sticker.setAttribute('decoding', 'async')
     stickersContainer.append(sticker)
-  })
+  }
 }
-generator()
