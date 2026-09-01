@@ -35,7 +35,6 @@ h1, h2, h3 {
 a {
   color: #ffcc99;
   text-underline-offset: 0.18em;
-  transition: color 160ms ease-out;
 }
 
 a:hover {
@@ -112,14 +111,10 @@ textarea:focus-visible {
   min-height: 42px;
   align-items: center;
   justify-content: center;
-  transition: transform 160ms ease-out, color 160ms ease-out;
+  gap: 6px;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .links a:hover {
-    transform: translateY(-3px);
-  }
-}
+.links a span { font-size: 12px; }
 
 .links a:focus-visible {
   outline: 2px solid #ffcc99;
@@ -157,6 +152,14 @@ textarea:focus-visible {
 .hero h1 {
   margin-bottom: 12px;
   font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: #ffcc99;
+  font-size: 0.85em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .hero p {
@@ -201,42 +204,6 @@ footer time {
 
 .content {
   display: block;
-}
-
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #1e1e1e;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 180ms ease-out, visibility 180ms ease-out;
-}
-
-.loader.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.spinner {
-  border: 8px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #fff;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 ::-webkit-scrollbar {
@@ -296,19 +263,5 @@ footer time {
     display: flex;
     max-height: none;
     flex-direction: row;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .spinner {
-    animation: none;
-  }
-
-  *, *::before, *::after {
-    transition-duration: 0.01ms !important;
   }
 }

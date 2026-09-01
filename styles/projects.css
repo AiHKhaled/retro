@@ -46,13 +46,6 @@ ul.cards {
 .card a {
   display: inline-block;
   padding: 4px 0;
-  transition: transform 160ms ease-out, color 160ms ease-out;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .card a:hover {
-    transform: translateX(4px);
-  }
 }
 
 .card a:focus-visible {

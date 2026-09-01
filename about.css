@@ -26,15 +26,8 @@
 }
 
 .socials img {
-  transition: transform 160ms ease-out;
   width: 32px;
   height: 32px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .socials a:hover img {
-    transform: scale(1.12);
-  }
 }
 
 .contact-form {
@@ -85,15 +78,6 @@ button {
   border: 1px solid white;
   padding: 5px 10px;
   width: fit-content;
-  transition: transform 160ms ease-out, background-color 160ms ease-out;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  button:hover {
-    background-color: green;
-  }
-}
-
-button:active {
-  transform: scale(0.97);
-}
+button:hover { background-color: #006b00; }
