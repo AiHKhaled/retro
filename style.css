@@ -33,8 +33,13 @@ h1, h2, h3 {
 }
 
 a {
+  color: #ffcc99;
   text-underline-offset: 0.18em;
   transition: color 160ms ease-out;
+}
+
+a:hover {
+  color: #fff;
 }
 
 button,
