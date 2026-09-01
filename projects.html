@@ -128,6 +128,10 @@
     </head>
     <body>
         <a class="skip-link" href="#main-content">Skip to content</a>
+        <div class="loader" id="loader" aria-hidden="true">
+            <div class="spinner"></div>
+        </div>
+
         <div class="content" id="content">
             <div id="site-header"></div>
             <main id="main-content">
@@ -384,7 +388,12 @@
 
                     <li class="back">
                         <a href="index.html" aria-label="Back to home">
-                            ← Back to home
+                            <img
+                                src="back.gif"
+                                alt="back"
+                                loading="lazy"
+                                decoding="async"
+                            />
                         </a>
                     </li>
                 </ul>
@@ -402,5 +411,6 @@
                 document.getElementById("site-footer").innerHTML = footer
             })
         </script>
+        <script src="scripts/loader.js?v=20260815b"></script>
     </body>
 </html>
